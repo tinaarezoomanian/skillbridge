@@ -1,4 +1,4 @@
-SkillBridge 🧭  
+# SkillBridge 🧭  
 AI-Powered Career Path & Skill Gap Recommender
 
 SkillBridge is a data science web application that analyzes résumés using natural language processing (NLP) to extract technical skills, compares them against target job roles, and recommends personalized learning resources to help close skill gaps.
@@ -7,7 +7,7 @@ This project was developed as a senior project and focuses on applying NLP, mach
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 - 📄 Resume skill extraction using NLP  
 - 🎯 Role-based skill comparison  
@@ -20,7 +20,7 @@ This project was developed as a senior project and focuses on applying NLP, mach
 
 ---
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - **Python**
 - **spaCy** (NLP)
@@ -31,7 +31,7 @@ This project was developed as a senior project and focuses on applying NLP, mach
 
 ---
 
-📦 Installation & Setup
+## 📦 Installation & Setup
 
 1️⃣ Clone the repository
 
@@ -59,7 +59,7 @@ The app will open automatically in your browser.
 
 ---
 
-🧪 Demo Instructions
+## 🧪 Demo Instructions
 
 Upload a PDF résumé
 
@@ -79,13 +79,13 @@ Download the personalized PDF report
 
 ---
 
-📸 Screenshots
+## 📸 Screenshots
 
 Screenshots of the application can be found in the screenshots/ folder.
 
 ---
 
-🔐 Data Privacy
+## 🔐 Data Privacy
 Résumés are processed locally
 
 No data is stored remotely
@@ -96,7 +96,7 @@ No personal data is shared
 
 ---
 
-🌐 Deployment
+## 🌐 Deployment
 The application can be deployed using Streamlit Community Cloud, allowing access through a public URL without local installation.
 
 Basic deployment steps:
@@ -113,12 +113,12 @@ Click Deploy
 
 ---
 
-🎓 Academic Context
+## 🎓 Academic Context
 
 Developed as part of CS 4610 – Senior Project, demonstrating applied data science, NLP, and full-stack prototyping.
 
 ---
 
-Author:
+## Author:
 Tina Arezoomanians
 Computer Science — Cal Poly Pomona
