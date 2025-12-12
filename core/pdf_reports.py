@@ -1,57 +1,90 @@
 from fpdf import FPDF
 from io import BytesIO
 
-def _wrap_long_unbroken(text: str, chunk: int = 70) -> str:
+
+def _wrap_long_unbroken(text: str, chunk: int = 60) -> str:
+    """
+    Insert zero-width break opportunities into very long unbroken strings
+    (like URLs) so FPDF can wrap them inside multi_cell.
+    """
     if not text:
         return ""
+
     out = []
     for token in str(text).split(" "):
-        if len(token) > chunk:
-            out.append("\n".join(token[i:i+chunk] for i in range(0, len(token), chunk)))
-        else:
+        if len(token) <= chunk:
             out.append(token)
+        else:
+            # Break long token into smaller pieces
+            pieces = [token[i : i + chunk] for i in range(0, len(token), chunk)]
+            out.append("\n".join(pieces))
     return " ".join(out)
 
-def _safe_multi_cell(pdf: FPDF, h: float, txt: str, indent: float = 0):
-    # always start from a known x
-    pdf.set_x(pdf.l_margin + indent)
 
-    # compute AVAILABLE width from current x to right margin
-    avail_w = pdf.w - pdf.r_margin - pdf.get_x()
-
-    # guarantee it's never too small (prevents the "single character" crash)
-    if avail_w < 10:
-        pdf.set_x(pdf.l_margin)
-        avail_w = pdf.w - pdf.l_margin - pdf.r_margin
-        if avail_w < 10:
-            avail_w = 10
-
-    pdf.multi_cell(avail_w, h, txt)
-
-def build_pdf_report(role, match_percent, resume_skills, job_skills, matched, missing, resources):
+def build_pdf_report(
+    role,
+    match_percent,
+    resume_skills,
+    job_skills,
+    matched,
+    missing,
+    resources,
+):
     pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
-    pdf.set_auto_page_break(auto=True, margin=12)
 
+    # Title
     pdf.set_font("Arial", "B", 16)
-    _safe_multi_cell(pdf, 10, "SkillBridge Report")
+    pdf.cell(0, 10, "SkillBridge Report", ln=True)
 
+    # Summary
     pdf.set_font("Arial", "", 12)
-    _safe_multi_cell(pdf, 7, f"Role: {role}")
-    _safe_multi_cell(pdf, 7, f"Match: {match_percent}%")
+    pdf.cell(0, 8, f"Role: {role}", ln=True)
+    pdf.cell(0, 8, f"Match: {match_percent}%", ln=True)
+    pdf.ln(3)
 
-    pdf.ln(2)
+    # Matched Skills
     pdf.set_font("Arial", "B", 12)
-    _safe_multi_cell(pdf, 7, "Missing Skills:")
-
+    pdf.cell(0, 8, "Matched Skills:", ln=True)
     pdf.set_font("Arial", "", 11)
-    for s in missing:
-        _safe_multi_cell(pdf, 6, f"- {s}:", indent=0)
+    if matched:
+        pdf.multi_cell(0, 6, ", ".join(matched))
+    else:
+        pdf.multi_cell(0, 6, "None")
+    pdf.ln(2)
 
-        r = _wrap_long_unbroken(resources.get(s, ""))
-        _safe_multi_cell(pdf, 6, r, indent=6)
+    # Missing Skills + Resources
+    pdf.set_font("Arial", "B", 12)
+    pdf.cell(0, 8, "Missing Skills & Recommendations:", ln=True)
+    pdf.set_font("Arial", "", 11)
 
-        pdf.ln(1)
+    if not missing:
+        pdf.multi_cell(0, 6, "No missing skills 🎉")
+    else:
+        for s in missing:
+            pdf.set_font("Arial", "B", 11)
+            pdf.multi_cell(0, 6, f"- {s}")
+            pdf.set_font("Arial", "", 11)
 
-    pdf_bytes = pdf.output(dest="S").encode("latin-1", errors="replace")
+            rec = resources.get(s, "")
+            if isinstance(rec, (list, tuple)):
+                for r in rec:
+                    pdf.multi_cell(0, 6, _wrap_long_unbroken(str(r)))
+            elif isinstance(rec, dict):
+                for k, v in rec.items():
+                    line = f"{k}: {v}"
+                    pdf.multi_cell(0, 6, _wrap_long_unbroken(line))
+            else:
+                pdf.multi_cell(0, 6, _wrap_long_unbroken(str(rec)))
+
+            pdf.ln(1)
+
+    # IMPORTANT: output() can return str OR bytes/bytearray depending on fpdf version
+    pdf_bytes = pdf.output(dest="S")
+    if isinstance(pdf_bytes, str):
+        pdf_bytes = pdf_bytes.encode("latin-1", errors="replace")
+    else:
+        pdf_bytes = bytes(pdf_bytes)
+
     return BytesIO(pdf_bytes)
