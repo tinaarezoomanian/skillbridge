@@ -96,7 +96,7 @@ No personal data is shared
 
 ---
 
-## 🔗 Live Demo: https://tinaarezoomanian-skillbridge-app-s3tp24.streamlit.app
+## 🔗 https://tinaarezoomanian-skillbridge-app-s3tp24.streamlit.app
 
 ---
 
