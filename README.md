@@ -96,20 +96,7 @@ No personal data is shared
 
 ---
 
-## 🌐 Deployment
-The application can be deployed using Streamlit Community Cloud, allowing access through a public URL without local installation.
-
-Basic deployment steps:
-
-Push the repository to GitHub
-
-Go to https://streamlit.io/cloud
-
-Connect the GitHub repository
-
-Set app.py as the main file
-
-Click Deploy
+## 🔗 Live Demo: https://tinaarezoomanian-skillbridge-app-s3tp24.streamlit.app
 
 ---
 
