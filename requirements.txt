@@ -5,3 +5,4 @@ scikit-learn
 spacy
 PyPDF2
 fpdf
+en-core-web-sm==3.7.1
