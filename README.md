@@ -34,19 +34,27 @@ This project was developed as a senior project and focuses on applying NLP, mach
 📦 Installation & Setup
 
 1️⃣ Clone the repository
+
 git clone https://github.com/tinaarezoomanian/skillbridge.git
+
 cd skillbridge
 
 2️⃣ Create and activate a virtual environment
+
 python -m venv venv
+
 source venv/bin/activate   # macOS / Linux
+
 venv\Scripts\activate      # Windows
 
 3️⃣ Install dependencies
+
 pip install -r requirements.txt
 
 4️⃣ Run the application
+
 streamlit run app.py
+
 The app will open automatically in your browser.
 
 ---
