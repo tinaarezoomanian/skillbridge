@@ -3,7 +3,7 @@ AI-Powered Career Path & Skill Gap Recommender
 
 SkillBridge is a data science web application that analyzes résumés using natural language processing (NLP) to extract technical skills, compares them against target job roles, and recommends personalized learning resources to help close skill gaps.
 
-This project was developed as a senior capstone project and focuses on applying NLP, machine learning, and user-centered design to a real-world career development problem.
+This project was developed as a senior project and focuses on applying NLP, machine learning, and user-centered design to a real-world career development problem.
 
 ---
 
@@ -49,6 +49,8 @@ pip install -r requirements.txt
 streamlit run app.py
 The app will open automatically in your browser.
 
+---
+
 🧪 Demo Instructions
 Upload a PDF résumé
 
@@ -66,8 +68,13 @@ Explore recommended learning resources
 
 Download the personalized PDF report
 
+---
+
 📸 Screenshots
+
 Screenshots of the application can be found in the screenshots/ folder.
+
+---
 
 🔐 Data Privacy
 Résumés are processed locally
@@ -77,6 +84,8 @@ No data is stored remotely
 Analysis history is local per user
 
 No personal data is shared
+
+---
 
 🌐 Deployment
 The application can be deployed using Streamlit Community Cloud, allowing access through a public URL without local installation.
@@ -93,8 +102,13 @@ Set app.py as the main file
 
 Click Deploy
 
+---
+
 🎓 Academic Context
+
 Developed as part of CS 4610 – Senior Project, demonstrating applied data science, NLP, and full-stack prototyping.
+
+---
 
 Author
 Tina Arezoomanians
