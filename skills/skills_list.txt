@@ -1,0 +1,123 @@
+python
+java
+javascript
+typescript
+c
+c++
+c#
+go
+rust
+swift
+kotlin
+sql
+nosql
+html
+css
+bash
+shell
+linux
+git
+github
+gitlab
+docker
+kubernetes
+aws
+azure
+gcp
+flask
+django
+fastapi
+node
+node.js
+express
+react
+vue
+angular
+nextjs
+nuxt
+svelte
+jquery
+firebase
+mongodb
+postgresql
+mysql
+sqlite
+oracle
+redis
+elasticsearch
+hadoop
+spark
+bigquery
+databricks
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+plotly
+jupyter
+notebook
+tableau
+powerbi
+excel
+spreadsheets
+ml
+machinelearning
+deeplearning
+tensorflow
+pytorch
+keras
+sklearn
+scikit-learn
+xgboost
+lightgbm
+nlp
+spacy
+transformers
+bert
+gpt
+opencv
+computer vision
+data cleaning
+data wrangling
+data analysis
+data visualization
+feature engineering
+model evaluation
+model deployment
+api
+apis
+rest
+restful
+graphql
+cloud
+devops
+dockercompose
+terraform
+ci
+cd
+ci/cd
+networking
+cybersecurity
+vulnerability
+penetration
+siem
+incident response
+monitoring
+logging
+prometheus
+grafana
+testing
+unittest
+pytest
+integration testing
+system design
+microservices
+agile
+scrum
+jira
+unit testing
+oop
+object-oriented
+functional programming
+debugging

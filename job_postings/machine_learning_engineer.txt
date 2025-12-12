@@ -1,0 +1,9 @@
+Responsibilities:
+- Design and train deep learning architectures.
+- Work with TensorFlow or PyTorch.
+- Optimize model performance and deployment.
+- Implement data preprocessing pipelines.
+- Deploy models with APIs or cloud services.
+
+Required Skills:
+Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, NumPy, Pandas, Scikit-learn, APIs, Docker

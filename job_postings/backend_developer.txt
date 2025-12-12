@@ -1,0 +1,9 @@
+Responsibilities:
+- Build and maintain backend systems.
+- Write server-side logic using Python or Java.
+- Work with SQL and NoSQL databases.
+- Implement and manage REST APIs.
+- Ensure performance, security, and scalability.
+
+Required Skills:
+Python, Java, SQL, NoSQL, APIs, Docker, Git

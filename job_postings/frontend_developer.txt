@@ -1,0 +1,8 @@
+Responsibilities:
+- Build responsive user interfaces.
+- Use HTML, CSS, and JavaScript frameworks.
+- Collaborate with backend developers.
+- Optimize UI performance.
+
+Required Skills:
+HTML, CSS, JavaScript, React, UI/UX Design, APIs, Git

@@ -1,0 +1,9 @@
+Responsibilities:
+- Analyze datasets using Python, SQL, and Excel.
+- Build dashboards using Tableau.
+- Work with data cleaning tools like Pandas and NumPy.
+- Write queries to support business reporting.
+- Collaborate with engineers using Git and Bash.
+
+Required Skills:
+Python, SQL, Pandas, NumPy, Excel, Tableau, Git, Bash

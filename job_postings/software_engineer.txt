@@ -1,0 +1,10 @@
+Responsibilities:
+- Develop scalable backend and frontend components.
+- Write and maintain code in Python, Java, or JavaScript.
+- Build APIs using frameworks like Flask, Django, or Node.js.
+- Use Git for version control.
+- Troubleshoot bugs and performance issues.
+- Deploy applications to cloud platforms.
+
+Required Skills:
+Python, Java, JavaScript, HTML, CSS, Git, SQL, APIs, Flask, Django, Node.js

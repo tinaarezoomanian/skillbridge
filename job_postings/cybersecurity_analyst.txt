@@ -1,0 +1,9 @@
+Responsibilities:
+- Monitor security alerts and incidents.
+- Analyze network traffic and logs.
+- Conduct vulnerability assessments.
+- Understand common attack vectors and mitigation strategies.
+- Work with Linux and bash scripting.
+
+Required Skills:
+Python, Bash, Linux, Networking, SIEM Tools, Vulnerability Scanning, Security Analysis

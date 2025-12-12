@@ -1,0 +1,9 @@
+Responsibilities:
+- Build machine learning models using supervised and unsupervised methods.
+- Clean and analyze datasets using Pandas and NumPy.
+- Use visualization tools like Matplotlib and Seaborn.
+- Work with cloud environments for data storage and deployment.
+- Communicate insights using dashboards.
+
+Required Skills:
+Python, SQL, Pandas, NumPy, Scikit-learn, Machine Learning, TensorFlow, PyTorch, Data Visualization
