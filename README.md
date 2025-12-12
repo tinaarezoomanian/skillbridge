@@ -52,6 +52,7 @@ The app will open automatically in your browser.
 ---
 
 🧪 Demo Instructions
+
 Upload a PDF résumé
 
 Select a target job role
@@ -110,6 +111,6 @@ Developed as part of CS 4610 – Senior Project, demonstrating applied data scie
 
 ---
 
-Author
+Author:
 Tina Arezoomanians
 Computer Science — Cal Poly Pomona
