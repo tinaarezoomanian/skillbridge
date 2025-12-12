@@ -1,6 +1,8 @@
 import PyPDF2
 import spacy
 
+print("EXTRACTION.PY VERSION = 2025-12-12-1") 
+
 try:
     nlp = spacy.load("en_core_web_sm")
 except Exception:
